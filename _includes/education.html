@@ -1,0 +1,24 @@
+<section class="section experience">
+  <div class="section__title">Education</div>
+  <div class="section__content">
+    <div class="jobs">
+      {% for job in site.data.education %}
+      <div class="job">
+        <div class="time-place">
+          <div class="job__company">
+            {% if education.url %}
+              <a href="{{education.url}}" target="_blank">{{education.school}}</a>
+            {% else %}
+              {{education.school}}
+            {% endif %}
+          </div>
+          <div class="job__time">{{education.time}}</div>
+        </div>
+        <div class="job__position">{{education.degree}}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <a href="{{site.resume}}" target="_blank" class="arrow-link">View My Resume</a>
+  </div>
+</section>
