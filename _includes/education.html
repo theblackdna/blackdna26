@@ -2,19 +2,19 @@
   <div class="section__title">Education</div>
   <div class="section__content">
     <div class="jobs">
-      {% for education in site.data.education %}
+      {% for edu in site.data.education %}
       <div class="job">
         <div class="time-place">
           <div class="job__company">
-            {% if education.url %}
-              <a href="{{education.url}}" target="_blank">{{education.school}}</a>
+            {% if edu.url %}
+              <a href="{{edu.url}}" target="_blank">{{edu.school}}</a>
             {% else %}
-              {{education.school}}
+              {{edu.school}}
             {% endif %}
           </div>
-          <div class="job__time">{{education.time}}</div>
+          <div class="job__time">{{edu.time}}</div>
         </div>
-        <div class="job__position">{{education.degree}}</div>
+        <div class="job__position">{{edu.degree}}</div>
       </div>
       {% endfor %}
     </div>
